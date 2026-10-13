@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATM Simulator</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="atm">
+  <h1>🏧 Spandana Bank ATM</h1>
+  <div class="screen" id="msgbox"><p id="msg"></p></div>
+
+  <div class="screen" id="login">
+    <h2>Welcome</h2>
+    <input id="acc" placeholder="Account number" inputmode="numeric">
+    <input id="pin" type="password" placeholder="4-digit PIN" maxlength="4" inputmode="numeric">
+    <button onclick="login()">Login</button>
+    <button class="alt" onclick="show('register')">Create new account</button>
+  </div>
+
+  <div class="screen hidden" id="register">
+    <h2>New Account</h2>
+    <input id="rname" placeholder="Your name">
+    <input id="rpin" type="password" placeholder="Choose 4-digit PIN" maxlength="4" inputmode="numeric">
+    <button onclick="register()">Create</button>
+    <button class="alt" onclick="show('login')">Back</button>
+  </div>
+
+  <div class="screen hidden" id="menu">
+    <h2 id="hello"></h2>
+    <button onclick="showBalance()">Check Balance</button>
+    <button onclick="startMove('deposit')">Deposit</button>
+    <button onclick="startMove('withdraw')">Withdraw</button>
+    <button onclick="history()">Last 10 Transactions</button>
+    <button class="alt" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="screen hidden" id="amount">
+    <h2 id="atitle"></h2>
+    <input id="amt" type="number" min="1" step="0.01" placeholder="Amount">
+    <button onclick="doMove()">Confirm</button>
+    <button class="alt" onclick="show('menu')">Cancel</button>
+  </div>
+
+  <div class="screen hidden" id="result">
+    <h2 id="rtitle"></h2>
+    <p class="big" id="rtext"></p>
+    <button onclick="show('menu')">Back to Menu</button>
+  </div>
+
+  <div class="screen hidden" id="hist">
+    <h2>Transactions</h2>
+    <table id="tbl"></table>
+    <button class="alt" onclick="show('menu')">Back</button>
+  </div>
+</div><script src="app.js"></script></body></html>

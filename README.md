@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ATM Simulator (HTML/CSS/JS + Java + Aiven MySQL)
 
 ## Run
@@ -9,3 +10,6 @@
 5. Open http://localhost:8080 — create an account, then log in.
 
 Tables are created automatically on first start.
+=======
+# atm-simulator
+>>>>>>> 4b069dee5b12c035c11ba779e71eb5f66826970c
